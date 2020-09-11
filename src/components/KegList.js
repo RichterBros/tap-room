@@ -1,34 +1,35 @@
 import React from "react";
 import Keg from "./Keg";
+import PropTypes from "prop-types";
 
 
 
 
-const masterKegList = [
-  {
-    name:"bigKeg",
-    brand:"epicoors",
-    price:"$50",
-    alcoholContent:"5.0%"
-  },
-  {
-    name:"bigKeg",
-    brand:"epicoors",
-    price:"$50",
-    alcoholContent:"5.0%"
-  },
-  {
-    name:"bigKeg",
-    brand:"epicoors",
-    price:"$50",
-    alcoholContent:"5.0%"
-  }
-];
-function KegList(){
+// const masterKegList = [
+//   {
+//     name:"bigKeg",
+//     brand:"epicoors",
+//     price:"$50",
+//     alcoholContent:"5.0%"
+//   },
+//   {
+//     name:"bigKeg",
+//     brand:"epicoors",
+//     price:"$50",
+//     alcoholContent:"5.0%"
+//   },
+//   {
+//     name:"bigKeg",
+//     brand:"epicoors",
+//     price:"$50",
+//     alcoholContent:"5.0%"
+//   }
+// ];
+function KegList(props){
   return (
     <React.Fragment>
       <hr/>
-      {masterKegList.map((keg, index) =>
+      {props.kegList.map((keg, index) =>
         <Keg name={keg.name}
           brand={keg.brand}
           price={keg.price}
@@ -38,4 +39,9 @@ function KegList(){
     </React.Fragment>
   );
 }
+
+KegList.propTypes = {
+  KegList: PropTypes.array
+};
+
 export default KegList;
