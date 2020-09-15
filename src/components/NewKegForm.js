@@ -29,6 +29,8 @@ function NewKegForm(props){
           name='alcoholContent'
           placeholder='alcoholContent' />
         
+        
+
         <button type='submit'>Add keg</button>
       </form>
     </React.Fragment>

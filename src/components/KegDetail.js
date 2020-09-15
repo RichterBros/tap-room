@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+
 function KegDetail(props){
   const { keg } = props;
 
@@ -10,6 +11,7 @@ function KegDetail(props){
       <h3>{keg.name} - {keg.brand}</h3>
       <p><em>{keg.price}</em></p>
       <hr/>
+     
     </React.Fragment>
   );
 }
