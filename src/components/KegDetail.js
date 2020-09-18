@@ -13,10 +13,10 @@ function KegDetail(props){
       <h3>name: {keg.name} - brand: {keg.brand}</h3>
       <p><em>price: {keg.price}</em></p>
       <p><em>pints: {keg.pints}</em></p>
-      <button onClick={ props.onClickingDecrement }>Sell Pint</button>
+      <button class="btn btn-info" onClick ={ props.onClickingDecrement }>Sell Pint</button>
       <hr/>
-      <button onClick={ props.onClickingEdit }>Update Keg</button> 
-      <button onClick={()=> onClickingDelete(keg.id) }>delete keg</button>
+      <button class="btn btn-warning" onClick={ props.onClickingEdit }>Update Keg</button> 
+      <button class="btn btn-danger" onClick={()=> onClickingDelete(keg.id) }>delete keg</button>
     </React.Fragment>
   );
 }

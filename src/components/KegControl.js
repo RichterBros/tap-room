@@ -3,7 +3,7 @@ import NewKegForm from './NewKegForm';
 import KegList from './KegList';
 import KegDetail from './KegDetail';
 import EditKegForm from './EditKegForm'
-
+import Button from 'react-bootstrap/Button';
 class KegControl extends React.Component {
 
   constructor(props) {
@@ -11,11 +11,11 @@ class KegControl extends React.Component {
     this.state = {
       formVisibleOnPage: false,
       masterKegList: [],
-      selectedKeg: null, 
+      selectedKeg: null,
       editing: false,
-      
+
     };
-  
+
   }
 
   handleDeletingKeg = (id) => {
@@ -26,58 +26,59 @@ class KegControl extends React.Component {
     });
   }
 
-  
-  
+
+
   handleEditingKegInList = (kegToEdit) => {
     const editedMasterKegList = this.state.masterKegList
       .filter(keg => keg.id !== this.state.selectedKeg.id)
       .concat(kegToEdit);
     this.setState({
-        masterKegList: editedMasterKegList,
-        editing: false,
-        selectedKeg: null
-      });
+      masterKegList: editedMasterKegList,
+      editing: false,
+      selectedKeg: null
+    });
   }
 
   handleEditClick = () => {
-   
-    this.setState({editing: true});
+
+    this.setState({ editing: true });
   }
 
   handleChangingSelectedKeg = (id) => {
     const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
-    this.setState({selectedKeg: selectedKeg});
+    this.setState({ selectedKeg: selectedKeg });
   }
- 
- 
- 
+
+
+
   handleAddingNewKegToList = (newKeg) => {
     const newMasterKegList = this.state.masterKegList.concat(newKeg);
     this.setState({
       masterKegList: newMasterKegList,
-      formVisibleOnPage: false });
+      formVisibleOnPage: false
+    });
   }
-  
-  
+
+
   handleDecrementPint = () => {
     const sellPint = this.state.masterKegList.map((pint) => {
       if (pint.id !== this.state.selectedKeg.id) {
         return pint;
       }
       return {
-  
+
         ...pint,
-        
+
         pints: Math.max(pint.pints - 1, 0),
-      
+
       };
     });
     const selectedKeg = { ...this.state.selectedKeg, pints: Math.max(this.state.selectedKeg.pints - 1, 0) };
-  this.setState({ masterKegList: sellPint,  selectedKeg: selectedKeg });
-  
-  
+    this.setState({ masterKegList: sellPint, selectedKeg: selectedKeg });
+
+
   }
- 
+
 
   handleClick = () => {
     if (this.state.selectedKeg != null) {
@@ -93,28 +94,28 @@ class KegControl extends React.Component {
     }
   }
 
-  
 
 
-  render(){
+
+  render() {
     let currentlyVisibleState = null;
-    let buttonText = null; 
+    let buttonText = null;
 
-    if (this.state.editing ) {      
-      currentlyVisibleState = <EditKegForm keg = {this.state.selectedKeg} onEditKeg = {this.handleEditingKegInList}/>
+    if (this.state.editing) {
+      currentlyVisibleState = <EditKegForm keg={this.state.selectedKeg} onEditKeg={this.handleEditingKegInList} />
       buttonText = "Return to Keg List";
 
 
 
     } else if (this.state.selectedKeg != null) {
-      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} onClickingDecrement = {this.handleDecrementPint} //new
-      onClickingEdit = {this.handleEditClick} onClickingDelete = {this.handleDeletingKeg}/> //new
+      currentlyVisibleState = <KegDetail keg={this.state.selectedKeg} onClickingDecrement={this.handleDecrementPint} //new
+        onClickingEdit={this.handleEditClick} onClickingDelete={this.handleDeletingKeg} /> //new
       buttonText = "Return to Keg List";
-      
+
     }
-    
+
     else if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList}  />;
+      currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />;
       buttonText = "Return to Keg List";
     } else {
       currentlyVisibleState = <KegList kegList={this.state.masterKegList} onKegSelection={this.handleChangingSelectedKeg} />;
@@ -123,8 +124,8 @@ class KegControl extends React.Component {
     return (
       <React.Fragment>
         {currentlyVisibleState}
-        
-        <button onClick={this.handleClick}>{buttonText}</button>
+
+        <button class="btn btn-success" onClick={this.handleClick}>{buttonText}</button>
       </React.Fragment>
     );
   }
@@ -132,5 +133,5 @@ class KegControl extends React.Component {
 }
 
 export default KegControl;
-      
+
 
