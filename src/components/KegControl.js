@@ -108,7 +108,7 @@ class KegControl extends React.Component {
 
     } else if (this.state.selectedKeg != null) {
       currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} onClickingDecrement = {this.handleDecrementPint} //new
-      onClickingEdit = {this.handleEditClick}/> //new
+      onClickingEdit = {this.handleEditClick} onClickingDelete = {this.handleDeletingKeg}/> //new
       buttonText = "Return to Keg List";
       
     }
