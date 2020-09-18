@@ -7,7 +7,11 @@ function NewKegForm(props){
   
   function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    props.onNewKegCreation({name: event.target.name.value, brand: event.target.brand.value, price: event.target.price.value, pints: parseInt(event.target.pints.value), id: v4()
+    props.onNewKegCreation({name: event.target.name.value, 
+      brand: event.target.brand.value, 
+      price: event.target.price.value, 
+      alcoholContent: event.target.alcoholContent.value,
+      pints: parseInt(event.target.pints.value), id: v4()
     })
   }
   
@@ -28,32 +32,3 @@ NewKegForm.propTypes = {
 };
 export default NewKegForm;
 
-
-//   return (
-//     <React.Fragment>
-//       <form onSubmit={handleNewKegFormSubmission}>
-//         <input
-//           type='text'
-//           name='name'
-//           placeholder='name' />
-//         <input
-//           type='text'
-//           name='brand'
-//           placeholder='brand' />
-//         <input
-//           name='price'
-//           placeholder='price' />
-//          <input
-//           name='alcoholContent'
-//           placeholder='alcoholContent' />
-//         <input
-//           type='text'
-//           name='pints'
-//           placeholder='pints' />
-        
-
-//         <button type='submit'>Add keg</button>
-//       </form>
-//     </React.Fragment>
-//   );
-// }
