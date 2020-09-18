@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 
 function Keg(props){
+  
   return (
     <React.Fragment>
       
@@ -21,7 +22,7 @@ function Keg(props){
     </React.Fragment>
   );
 }
-//<button onClick = {props.handleClick}>pints remaining: {props.count-1}</button>
+
 Keg.propTypes = {
   names: PropTypes.string,
   brand: PropTypes.string,
