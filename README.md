@@ -1,3 +1,19 @@
+
+
+
+
+
+
+![Tap-Room-component diagram](https://user-images.githubusercontent.com/21322032/93651852-d379bb80-f9c7-11ea-904b-59579325b80f.jpg)
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
