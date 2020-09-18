@@ -21,7 +21,7 @@ This app will let a user see a list/menu of all available kegs. For each keg, it
 
 ## Component Diagram
 
-![Tap-Room-component diagram](https://user-images.githubusercontent.com/21322032/93651852-d379bb80-f9c7-11ea-904b-59579325b80f.jpg)
+![Tap-Room-component diagram](https://user-images.githubusercontent.com/21322032/93653241-e478fb80-f9cc-11ea-9c44-48d25c5deff1.jpg)
 
 ## Known Bugs
 
