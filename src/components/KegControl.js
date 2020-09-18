@@ -3,7 +3,7 @@ import NewKegForm from './NewKegForm';
 import KegList from './KegList';
 import KegDetail from './KegDetail';
 import EditKegForm from './EditKegForm'
-import Button from 'react-bootstrap/Button';
+
 class KegControl extends React.Component {
 
   constructor(props) {

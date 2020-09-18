@@ -1,5 +1,4 @@
 import React from "react";
-// import NewKegForm from "./NewKegForm";
 import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
 
@@ -30,13 +29,14 @@ function EditKegForm(props) {
   );
 }
 
-
-
 EditKegForm.propTypes = {
   onEditKeg: PropTypes.func,
-  //pints: PropTypes.number
 };
 export default EditKegForm;
+  
+
+
+
 
 
 

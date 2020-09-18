@@ -12,11 +12,7 @@ function Keg(props) {
         <h3>brand: {props.brand}</h3>
         <p><em>price: {props.price}</em></p>
         <p><em>alcohol Content: {props.alcoholContent}</em></p>
-
         <p><em>pints: {props.pints}</em></p>
-
-
-
         <hr />
       </div>
 
@@ -36,5 +32,9 @@ Keg.propTypes = {
 
 };
 export default Keg;
+
+
+
+
 
 

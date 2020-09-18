@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 
 function KegDetail(props){
-  //const { keg } = props;
+
   const { keg, onClickingDelete } = props;
   
   
