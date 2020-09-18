@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Keg from './Keg';
 
 class Counter extends Component {
 
@@ -7,6 +8,7 @@ class Counter extends Component {
 
       this.state = {count: 5}
       this.handleClick = this.handleClick.bind(this)
+      this.count = this.handleClick.bind(this)
     }
 
     handleClick() {
@@ -16,9 +18,12 @@ class Counter extends Component {
     
     render() {
       return(
-          <button onClick = {this.handleClick}>pints remaining: {this.state.count}</button>
-      )
+          //<button onClick = {this.handleClick}>pints remaining: {this.state.count}</button>
+          <button onClick={() => this.setState({ count: Keg.props.count + 1 })}>pints remaining: {this.state.count}</button>
+          )
     }
 }
 
 export default Counter;
+
+//<button onClick = {this.handleClick}>upvote: {this.state.count}</button>
