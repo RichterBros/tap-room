@@ -92,8 +92,8 @@ handleEditingKegInList = (kegToEdit) => {
       buttonText = "Return to Keg List";
 
     } else if (this.state.selectedKeg != null) {
-      currentlyVisibleState = <KegDetail keg={this.state.selectedKeg} onClickingDecrement={this.handleDecrementPint} //new
-        onClickingEdit={this.handleEditClick} onClickingDelete={this.handleDeletingKeg} /> //new
+      currentlyVisibleState = <KegDetail keg={this.state.selectedKeg} onClickingDecrement={this.handleDecrementPint} 
+        onClickingEdit={this.handleEditClick} onClickingDelete={this.handleDeletingKeg} /> 
       buttonText = "Return to Keg List";
     }
     else if (this.state.formVisibleOnPage) {
