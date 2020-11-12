@@ -8,8 +8,10 @@ import PropTypes from "prop-types";
 function KegList(props){
 
   return (
+    
     <React.Fragment>
       <hr/>
+      
       
       {props.kegList.map((keg) => 
         <Keg
@@ -22,6 +24,7 @@ function KegList(props){
           id={keg.id}
           key={keg.id}/>
       )}
+    
     </React.Fragment>
   );
 }

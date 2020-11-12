@@ -13,9 +13,9 @@ function Keg(props) {
         <p><em>price: {props.price}</em></p>
         <p><em>alcohol Content: {props.alcoholContent}</em></p>
         <p><em>pints: {props.pints}</em></p>
-        <hr />
+        <button class="btn btn-info" >click for details</button>
       </div>
-
+        <hr />
     </React.Fragment>
   );
 }
