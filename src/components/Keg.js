@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import kegger from '../kegger.png';
 
 function Keg(props) {
 
@@ -14,6 +14,7 @@ function Keg(props) {
         <p><em>alcohol Content: {props.alcoholContent}</em></p>
         <p><em>pints: {props.pints}</em></p>
         <button class="btn btn-info" >click for details</button>
+        <img src={kegger} />
       </div>
         <hr />
     </React.Fragment>
