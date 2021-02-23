@@ -7,31 +7,31 @@ function ReusableForm(props) {
       <form  onSubmit={props.formSubmissionHandler}>
       <div class="form-row">
       <div class="col">
-        <input class="form-control"
+        <input default value='test' class="form-control"
           type='text'
           name='name'
           placeholder='name' />
         </div>
         <div class="col">
-        <input class="form-control"
+        <input default value='test'class="form-control"
           type='text'
           name='brand'
           placeholder='brand' />
         </div>
         <div class="col">
-        <input class="form-control"
+        <input default value='500'class="form-control"
           type='text'
           name='price'
           placeholder='price' />
         </div>
         <div class="col">
-        <input class="form-control"
+        <input default value='20'class="form-control"
           type='text'
           name='alcoholContent'
           placeholder='abv.' />
         </div>
         <div class="col">
-        <input class="form-control"
+        <input default value='5'class="form-control"
           type='text'
           name='pints'
           placeholder='pints left' />

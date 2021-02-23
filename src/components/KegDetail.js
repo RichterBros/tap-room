@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import kegger from '../kegger.png';
 
 function KegDetail(props){
 
@@ -10,6 +10,7 @@ function KegDetail(props){
   return (
     <React.Fragment>
       <h2>Keg Detail</h2>
+      <img style={{float: 'right'}} src={kegger} alt='keg' />
       <h3>name: {keg.name}</h3>
       <h3>brand: {keg.brand}</h3>
       <p><em>price: {keg.price}</em></p>

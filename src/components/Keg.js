@@ -8,13 +8,13 @@ function Keg(props) {
     <React.Fragment>
 
       <div onClick={() => props.whenKegClicked(props.id)}>
+        <img style={{float: 'right'}} src={kegger} alt='keg' />
         <h3>name: {props.name} </h3>
         <h3>brand: {props.brand}</h3>
         <p><em>price: {props.price}</em></p>
         <p><em>alcohol Content: {props.alcoholContent}</em></p>
         <p><em>pints: {props.pints}</em></p>
         <button class="btn btn-info" >click for details</button>
-        <img src={kegger} />
       </div>
         <hr />
     </React.Fragment>
@@ -35,6 +35,7 @@ Keg.propTypes = {
 export default Keg;
 
 
+        
 
 
 
